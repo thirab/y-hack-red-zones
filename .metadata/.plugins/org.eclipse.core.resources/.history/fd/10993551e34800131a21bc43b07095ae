@@ -21,7 +21,10 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-                <activity
+        <meta-data
+    android:name="com.google.android.gms.version"
+    android:value="@integer/google_play_services_13" />
+        <activity
             android:name="com.example.redzones.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -29,11 +32,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <integer name="google_play_services_version">4030500</integer>
-            
-        <meta-data
-    android:name="com.google.android.maps.v2.API_KEY"
-    android:value="AIzaSyBxRC051cH8s4RQyD0eayYmcvUYNTpS0x4"/></activity>
+        </activity>
     </application>
 
 </manifest>

@@ -31,6 +31,7 @@
             </intent-filter>
             <integer name="google_play_services_version">4030500</integer>
             
+            <meta-data android:name="com.google.android.gms.version" android:value="@integer/13" />
         <meta-data
     android:name="com.google.android.maps.v2.API_KEY"
     android:value="AIzaSyBxRC051cH8s4RQyD0eayYmcvUYNTpS0x4"/></activity>
