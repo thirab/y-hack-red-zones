@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,19 +19,63 @@
  android:id="@+id/map"
  android:layout_width="match_parent"
  android:layout_height="match_parent"
- class="com.google.android.gms.maps.SupportMapFragment"/> -->
+ class="com.google.android.gms.maps.SupportMapFragment"/>
  
-<!--  <?xml version="1.0" encoding="utf-8"?>
- --><fragment xmlns:android="http://schemas.android.com/apk/res/android"
+  <?xml version="1.0" encoding="utf-8"? -->
+  
+  <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+    
+        
+    <fragment
           android:id="@+id/map"
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:name="com.google.android.gms.maps.MapFragment"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/alarm_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_toLeftOf="@+id/button2"
+        android:ems="10"
+        android:hint="@string/enter_alarm" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/map"
+        android:onClick="pushSomething"
+        android:text="@string/hello_world" />
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/map"
+        android:layout_alignRight="@+id/alarm_message"
+        android:layout_below="@+id/alarm_message"
+        android:ems="10"
+        android:hint="@string/enter_username" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>
  
-=======
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
- android:id="@+id/map"
- android:layout_width="match_parent"
- android:layout_height="match_parent"
- class="com.google.android.gms.maps.SupportMapFragment"/>
->>>>>>> a2c0206a92989eaaeaabea2b9a0bbecaafd78a57
+ 
