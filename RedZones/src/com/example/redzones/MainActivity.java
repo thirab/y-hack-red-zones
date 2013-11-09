@@ -31,14 +31,46 @@
 
 package com.example.redzones;
 
+import com.google.android.gms.maps.GoogleMap;
+
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends Activity {
-
+	GoogleMap map;
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        makeCircleButton();
+
+    }
+    
+    private void makeCircleButton() {
+        OnClickListener onClickListener = new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                newCircle();
+            }
+        };
+
+        Button button = (Button) findViewById(R.id.add_circular_area);
+        button.setOnClickListener(onClickListener);
+    }
+
+    public void newCircle() {
+        mMap = ((MapFragment) getFragmentManager().findFragmentById(R.id.map))
+                .getMap();
+
+        // Instantiates a new CircleOptions object and defines the center and
+        // radius
+        CircleOptions circleOptions = new CircleOptions().center(
+                new LatLng(37.4, -122.1)).radius(1000); // In meters
+        mMap.addCircle(circleOptions);
+
+        // Get back the mutable Circle
+        // Circle circle = mMap.addCircle(circleOptions);
     }
 }
