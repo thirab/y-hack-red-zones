@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -28,3 +29,10 @@
           android:layout_height="match_parent"
           android:name="com.google.android.gms.maps.MapFragment"/>
  
+=======
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+ android:id="@+id/map"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ class="com.google.android.gms.maps.SupportMapFragment"/>
+>>>>>>> a2c0206a92989eaaeaabea2b9a0bbecaafd78a57

@@ -31,6 +31,7 @@
 
 package com.example.redzones;
 
+<<<<<<< HEAD
 import com.google.android.gms.maps.GoogleMap;
 
 import android.app.Activity;
@@ -74,3 +75,20 @@ public class MainActivity extends Activity {
         // Circle circle = mMap.addCircle(circleOptions);
     }
 }
+=======
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import com.google.android.gms.maps.SupportMapFragment;
+
+public class MainActivity extends FragmentActivity{
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        SupportMapFragment fragment = new SupportMapFragment();
+        getSupportFragmentManager().beginTransaction()
+                .add(android.R.id.content, fragment).commit();
+    }
+}
+>>>>>>> a2c0206a92989eaaeaabea2b9a0bbecaafd78a57
